@@ -13,8 +13,8 @@
 2. Set the iframe's HTML code to be equal to the top window's HTML. This is done with iframe.contentDocument.write(top window's HTML code).
 3. Repeat 1. and 2.
 
-### Example 1 - <div> container
-First thing we need is an iframe container. If we have a <div> with id "iframeContainer1", the Inception call is:
+### Example 1 - div container
+First thing we need is an iframe container. If we have a div with id "iframeContainer1", the Inception call is:
 
 ```javascript
 inception = new Inception({
@@ -104,7 +104,7 @@ You can choose 1 of 3 kinds: imageId, matrix3d, and iframeContainerId. These a m
 
 * imageId (string) - Id of an image that will have the iframes on top of it. [Example](https://codepen.io/jonGomez/full/xRgRQa)
 * matrix3d (string of the type "matrix3d(0.326055, -0.0175387, ...)") - Used for distorted iframe containers. [Example](https://codepen.io/jonGomez/full/WoRRep/)
-* iframeContainerId (string) - Id of the iframe container. Should be a <div>, but can probably be other things? [Example](https://codepen.io/jonGomez/full/xROgqO/)
+* iframeContainerId (string) - Id of the iframe container. Should be a div, but can probably be other things? [Example](https://codepen.io/jonGomez/full/xROgqO/)
 
 [If you're using imageId instead of matrix3d (recommended), this CodePen may help you position and dimension the iframe container.](http://codepen.io/jonGomez/full/YGOdPE/)
 
