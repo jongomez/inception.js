@@ -1,6 +1,5 @@
 # __inception.js__
 
----
 
 ![alt text](http://i64.tinypic.com/23v01gn.jpg "inception.js")
 
@@ -10,7 +9,7 @@
 
 ### How does it work?
 
-1. Read top window's HTML code, e.g. window.top.document.documentElement.outerHTML.
+1. Read top window's HTML code, e.g. document.documentElement.outerHTML.
 2. Set the iframe's HTML code to be equal to the top window's HTML. This is done with iframe.contentDocument.write(top window's HTML code).
 3. Repeat 1. and 2.
 
