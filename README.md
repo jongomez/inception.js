@@ -110,7 +110,7 @@ You can choose 1 of 3 kinds: imageId, matrix3d, and iframeContainerId. These a m
 
 [If you decide to go ahead and use matrix3d's, this CodePen may help you find the matrix3d values.](http://codepen.io/jonGomez/full/yaRgjG)
 
-### Iframe container's position and dimension
+### Arguments - Iframe container's position and dimension
 
 If you used imageId to define you iframe container, use the following:
 
@@ -124,7 +124,7 @@ If you used imageId to define you iframe container, use the following:
 
 If you used matrix3d, the matrix3d transform should take care of the positioning and dimensions by itself. [CodePen to help you find the matrix3d values.](http://codepen.io/jonGomez/full/yaRgjG)
 
-### Scroll and resize
+### Arguments - Scroll and resize
 
 The iframes scroll and resize along with the main window. The following args influence these behaviours.
 
@@ -134,7 +134,7 @@ The iframes scroll and resize along with the main window. The following args inf
 * __imageWidth__ (string value in pixels, e.g. "500px") - Used with matrix3d in order to resize everything correctly.
 * __imageHeight__ - (string value in pixels, e.g. "500px") - Used with matrix3d in order to resize everything correctly.
 
-### Iframe's content position and dimensions
+### Arguments - Iframe's content position and dimensions
 
 Sometimes we want the iframe's content to be scaled or positioned in certain ways. The following args help with that.
 
@@ -143,8 +143,6 @@ Sometimes we want the iframe's content to be scaled or positioned in certain way
 * __matchWidthElementId__ (element Id string) - Scale the iframe's content in a way that the iframe's windows are filled with the given element, but only width wise. 
 * __matchHeightElementId__ (element Id string) - Scale the iframe's content in a way that the iframe's windows are filled with the given element, but only height wise. 
 * __sameHeightAsUser__ (true || false) - If true, scale the iframe's content in such a way that the iframe's windows "see" the same things as the user, but only height wise. 
-
-I really suck at explaining these things.
 
 ### Massive shout outs
 * [Franklin Ta - Computing CSS matrix3d transforms](http://franklinta.com/2014/09/08/computing-css-matrix3d-transforms/)
