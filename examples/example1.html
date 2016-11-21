@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>1 - inception.js</title>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="img1" alt="Free MacBook mockup" src="media/2.jpg">
+
+<ul>
+   <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+   <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+   <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+</ul>
+            
+
+    <img id="img2" alt="Free MacBook mockup" src="media/2.jpg">
+
+<ul>
+   <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+   <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+   <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+</ul>
+
+  <script src="../inception.js" type="text/javascript"></script>
+  <script> 
+
+  inception1 = new Inception({
+    imageId: "img1", 
+    matchWidthElementId: "img1",
+    levels: 4, 
+    leftAlignWith: "img1",
+
+    width: "60%",
+    height: "56%",
+    top: "25%",
+    left: "10%",
+    rotate: "5deg",
+
+    backgroundColor: "white",
+    backfaceVisibility: "visible"
+    //setZIndex: false,
+    //HTMLOverflow: "auto" 
+  })
+
+  inception1.onload = function() {
+    lastIframeScreen = this.iframes[3].contentDocument.getElementById(this.iframeContainerId)
+    lastIframeScreen.style.backgroundColor = "#252d3a"
+    lastIframeScreen.innerHTML = "<div style='width: 100%;" +
+    "height: 100%; background-image: url(media/squint.jpg);" +
+    "background-size: cover; background-position: center; opacity: 0.65'>"
+  }
+
+  inception2 = new Inception({
+    imageId: "img2", 
+    matchWidthElementId: "img2",
+    levels: 2, 
+    leftAlignWith: "img2",
+
+    width: "60%",
+    height: "56%",
+    top: "25%",
+    left: "10%",
+    rotate: "5deg",
+
+    backgroundColor: "white",
+    backfaceVisibility: "visible"
+    //setZIndex: false,
+    //HTMLOverflow: "auto" 
+  })
+
+
+  // Inspired by: https://www.developphp.com/video/JavaScript/Transform-Rotate-Image-Spin-Smooth-Animation-Tutorial
+  var degrees = 0;
+  function rotateAnimation(el,speed){
+    el.style.transform = "rotate("+degrees+"deg)";
+    degrees = degrees > 359 ? 1 : degrees + 1;
+  }
+
+  inception2.onload = function() {
+    //this.iframes[0].reverseScroll = true;
+    
+    lastIframeScreen = this.iframes[1].contentDocument.getElementById(this.iframeContainerId)
+    lastIframeScreen.innerHTML = "<div style='width: 100%;" +
+    "height: 100%; background-image: url(media/yodawg.png);" +
+    "background-size: cover; background-position: center; opacity: 0.9'>"
+
+    this.iframes[1].style.width = "100%"
+    // Parent element of the iframe is: The iframe container. 
+    // Parent element of the iframe container: the div that's wrapping the ifram container and mockup image.
+    setInterval(rotateAnimation, 100, this.iframes[1].parentElement.parentElement)
+  }
+
+
+  </script>
+     
+</body>
+</html>

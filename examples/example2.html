@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>2 - inception.js</title>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<ul>
+   <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+   <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+   <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+</ul>
+
+  <img id="img1" alt="Free MacBook mockup" src="media/3.jpg">
+
+<ul>
+   <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+   <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+   <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+</ul>
+            
+  <script src="../inception.js" type="text/javascript"></script>
+  <script> 
+
+  inception1 = new Inception({
+    imageId: "img1", 
+    matchWidthElementId: "img1",
+    levels: 1, 
+    leftAlignWith: "img1",
+    scrollOffset: 0,
+
+    matrix3d: "matrix3d(0.326055, -0.0175387, 0, 2.16792e-05, 0.0175239, 0.355945, 0, -0.000308109, 0, 0, 1, 0, 276.989, 171.989, 0, 1)",
+    imageWidth: "960px",
+    imageHeight: "640px",
+
+    backgroundColor: "white",
+    //setZIndex: false,
+    //HTMLOverflow: "auto" 
+  })
+
+  inception1.onload = function() {
+    lastIframeScreen = this.iframes[0].contentDocument.getElementById(this.iframeContainerId)  
+    lastIframeScreen.style.backgroundColor = "#748997"
+    lastIframeScreen.innerHTML = "<div style='width: 100%;" +
+    "height: 100%; background-image: url(media/yodawg.png);" +
+    "background-size: cover; background-position: center; opacity: 0.8'>"
+  }
+
+  </script>
+     
+</body>
+</html>
