@@ -27,8 +27,6 @@ The "levels" argument defines the number of nested iframes we want inside "ifram
 
 [Check it out on Codepen.](https://codepen.io/jonGomez/full/xROgqO/)
 
-BTW, the pens on editor view scroll up by themselves. Not sure why.
-
 ### Example 2 - Image
 
 If we have an image and want to add an iframe container on top of it, we need to position the iframe container and set it's dimensions. That's what the width, height, top, left and rotate arguments do: they define the dimensions and position of the iframe container, relative to the given image. Example call:
@@ -95,7 +93,7 @@ inception.onload = function() {
 * __classesToRemove__ (array with classes, e.g. ["class1", "class2"]) - Will remove all elements with given classes from the iframes.
 * __HTMLOverflow__ ("hidden", "visible", etc) - Used to display the scroll bars inside the iframes. Default value is "hidden" (i.e. default is no scroll bars).
 * __setZIndex__ (true || false) - Set z-index values in the image, iframeContainer, and iframeContainer parent. These z-index values are used because some iframes, when rendering, delete stuff on parent iframes. Not sure why it happens. Only happens on Chrome though, never had issues with Firefox.
-* __userHTML__ (string, e.g. "<html> (...) </html>") - Sets the HTML code of the iframes. If the user does not specify this argument, the HTML code of the iframes is the same as the current webpage.
+* __userHTML__ (string, e.g. "\<html> (...) \</html>") - Sets the HTML code of the iframes. If the user does not specify this argument, the HTML code of the iframes is the same as the current webpage.
 * __numParentsUntilTopWindow__ (int) - Number of parent windows until top window. This is used when the inception call is made inside an iframe. If the iframe's contentWindow is the direct child of window.top (i.e. window.top === iframe.contentWindow.parent), the numParentUntilTopWindow value is 1. Why is this used? Because inception.js needs to know it's being called on the correct window. This was created to enable usage on sites like CodePen, or any site that displays code inside a sandboxed iframe.
 
 ### Arguments - Defining the iframe containers
