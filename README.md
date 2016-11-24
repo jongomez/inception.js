@@ -3,8 +3,9 @@
 
 ![alt text](http://i64.tinypic.com/23v01gn.jpg "inception.js")
 
+<<<<<<< HEAD
 * Display the current website inside an iframe
-* Create loops of iframes within iframes
+* Create loops of websites within websites
 * [Blog post](https://jongomez.github.io/post/inceptionjs/)
 
 ### How does it work?
