@@ -1,7 +1,7 @@
 # __inception.js__
 
 
-![alt text](http://i64.tinypic.com/23v01gn.jpg "inception.js")
+![alt text](https://i.imgflip.com/xi7og.jpg "inception.js")
 
 
 * Display the current website inside an iframe
